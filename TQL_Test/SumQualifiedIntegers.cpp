@@ -8,8 +8,9 @@ using namespace std;
 // N is passed in on the command line
 int main(int argc, char *argv[]) {
 
-    // string nStr = argv[1];
-    int N = 10;
+    string nStr = argv[1];
+    string::size_type sz;
+    int N = stoi(nStr, &sz);
     int total = 0; 
     for(int idx = 1; idx < N; idx++) {
         if(idx % 3 == 0 || idx % 5 == 0) {
@@ -17,5 +18,6 @@ int main(int argc, char *argv[]) {
         }
     }
     cout << "For N of " << N << ", the sum is " << total << endl;
+    return 0;
 }
 
