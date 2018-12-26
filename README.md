@@ -8,4 +8,4 @@ This repo is a collection of projects done in C++ while learning the language. S
     CppCon : Calculator application
     StringLibrary : Easier to use string functions
     Begin_CPP_Ch1_Project : Print name and time (from book)
-    tutorial :
+    tutorial : Prints out favorite number (very simple like Hello, world!)
