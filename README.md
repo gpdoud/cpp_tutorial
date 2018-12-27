@@ -5,6 +5,7 @@ This repo is a collection of projects done in C++ while learning the language. S
 ## Index of projects
 
 - _Begin_CPP_Ch1_Project_ : Print name and time (from book)
+- _Beginning_C++_ : Exercises from the book *Beginning_C++*
 - _CppCon_ : Calculator application
 - _StringLibrary_ : Easier to use string functions
 - _TQL_Test_ : Sum the numbers from 1 to N but only if they are a multiple of 3 or 5
