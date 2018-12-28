@@ -2,17 +2,17 @@
 #include <stack>
 #include <string>
 
-using namespace std;
-
 class RPN {
 public:
-	int Calc(char *terms[]);
+	double Calc(char *terms[]);
 	RPN();
 	~RPN();
+	void help();
 private:
-	int add(int arg1, int arg2);
-	int sub(int arg1, int arg2);
-	int mul(int arg1, int arg2);
-	int div(int arg1, int arg2);
+	double add(double arg1, double arg2);
+	double sub(double arg1, double arg2);
+	double mul(double arg1, double arg2);
+	double div(double arg1, double arg2);
+	double pow(double arg1, double arg2);
 };
 

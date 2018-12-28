@@ -3,48 +3,58 @@
 #include <string>
 #include "Utility.h"
 
-using namespace std;
+double RPN::Calc(char *terms[]) {
 
-int RPN::Calc(char *terms[]) {
-
-	stack<int> stack;
+	std::stack<double> stack;
 	int idx = 1;
 	while(terms[idx] != NULL) {
-		if(isNumber(terms[idx]))
-			stack.push(atoi(terms[idx]));
-		if(isOperator(terms[idx])) {
-			string sop = terms[idx];
+		if(isNumber(terms[idx])) {
+			double term = std::stod(terms[idx]);
+			stack.push(term);
+		} else if(isOperator(terms[idx])) {
+			std::string sop = terms[idx];
 			char op = sop.at(0);
-			int arg2 = stack.top();
+			double arg2 = stack.top();
 			stack.pop();
-			int arg1 = stack.top();
+			double arg1 = stack.top();
 			stack.pop();
-			int result;
+			double result;
 			switch(op) {
 			case '+': result = add(arg1, arg2); break;
 			case '-': result = sub(arg1, arg2); break;
 			case '*': result = mul(arg1, arg2); break;
 			case '/': result = div(arg1, arg2); break;
+			case '@': result = pow(arg1, arg2); break;
 			}
 			stack.push(result);
 		}
 		idx++;
 	}
-	int answer = stack.top();
+	double answer = stack.top();
 	stack.pop();
 	return answer;
 }
-int RPN::add(int arg1, int arg2) {
+double RPN::add(double arg1, double arg2) {
 	return arg1 + arg2;
 }
-int RPN::sub(int arg1, int arg2) {
+double RPN::sub(double arg1, double arg2) {
 	return arg1 - arg2;
 }
-int RPN::mul(int arg1, int arg2) {
+double RPN::mul(double arg1, double arg2) {
 	return arg1 * arg2;
 }
-int RPN::div(int arg1, int arg2) {
+double RPN::div(double arg1, double arg2) {
 	return arg1 / arg2;
+}
+double RPN::pow(double arg1, double arg2) {
+	return ::pow(arg1, arg2);
+}
+void RPN::help() {
+	std::cout << "RPNCALC - RPN Calculator" << std::endl;
+	std::cout << "    FORMAT: RpnCalc [args]" << std::endl;
+	std::cout << "    Numbers are converted to doubles." << std::endl;
+	std::cout << "    Supported operators are: + (add), - (subtract), * (multiply), / (divide), @ (power)" << std::endl;
+	std::cout << "    Learning project by Greg Doud" << std::endl;
 }
 
 RPN::RPN() {}

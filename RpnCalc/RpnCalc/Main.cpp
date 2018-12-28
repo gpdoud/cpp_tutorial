@@ -3,13 +3,15 @@
 #include "RPN.h"
 #include "Utility.h"
 
-using namespace std;
-
 int main(int argc, char *argv[]) {
 
 	RPN rpn;
-	int result = rpn.Calc(argv);
-	cout << "Result is " << result << endl;
+	if(argc < 2) {
+		rpn.help();
+		return 1;
+	}
+	double result = rpn.Calc(argv);
+	std::cout << "Result is " << result << std::endl;
 	return 0;
 
 }
