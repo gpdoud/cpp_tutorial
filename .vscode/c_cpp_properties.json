@@ -4,7 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/StringLibrary/**"
+                "${workspaceFolder}/StringLibrary/**",
+                "${workspaceFolder}/StringLibrary/**",
+                "${workspaceFolder}/Begin_Cpp_Ch1/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
