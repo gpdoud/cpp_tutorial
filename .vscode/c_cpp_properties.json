@@ -5,8 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/StringLibrary/**",
-                "${workspaceFolder}/StringLibrary/**",
-                "${workspaceFolder}/Begin_Cpp_Ch1/**"
+                "${workspaceFolder}/Begin_Cpp_Ch1/**",
+                "${workspaceFolder}/Begin_CPP_Ch1_Project/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
