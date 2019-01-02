@@ -8,17 +8,17 @@ struct task {
 void add(const std::string description, const std::string afterDescription);
 void append(const std::string description);
 void cleanup();
-task * find(const std::string description);
-
+task *find(const std::string description);
 
 task *HEAD = nullptr, *TAIL = nullptr;
 
-task * find(const std::string description) {
+task *find(const std::string description) {
     task *t = HEAD;
     while(t != nullptr) {
         if(t->description == description) {
             return t;
         }
+        t = t->next;
     }
     return nullptr;
 }
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
     append("Genesis task");
     append("1st task");
     append("2nd task");
-    // add("0th task", "1st task");
+    add("0th task", "Genesis task");
     cleanup();
     std::cout << "Done..." << std::endl;
     return 0;

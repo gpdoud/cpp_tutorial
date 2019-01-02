@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "g++ main.cpp -o nsglnklst.exe",
+            "command": "make",
             "group": {
                 "kind": "build",
                 "isDefault": true
