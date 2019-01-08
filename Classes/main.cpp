@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     c1->set_name("ACME Manufacturing");
     std::cout << "id is " << c1->get_id() << ", name is " << c1->get_name() << std::endl;
 
-    std::cout << "Compare c & c1 is " << (c == c1) << std::endl;
+    std::cout << "Compare c & c1 is " << (*c == *c1) << std::endl;
 
     delete c;
     delete c1;

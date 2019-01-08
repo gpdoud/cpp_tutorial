@@ -26,6 +26,5 @@ Company::Company(const char *name) : Company() {
 }
 
 int Company::operator==(const Company &c) {
-    //return this->get_name().compare(c.get_name());
-    return 999;
+    return this->get_name().compare(c.get_name());
 }
