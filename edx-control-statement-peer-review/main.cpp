@@ -15,5 +15,6 @@ int main() {
     the_switch('N');
     the_switch('y');
     the_switch('Y');
+    the_switch('x');
     the_switch('Z');
 }

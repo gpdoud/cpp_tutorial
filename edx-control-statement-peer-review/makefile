@@ -12,3 +12,6 @@ switch.o : the_switch.cpp
 
 int-array.o : int_array.cpp
 	g++ -g -c int_array.cpp
+
+clean :
+	rm main.exe *.o

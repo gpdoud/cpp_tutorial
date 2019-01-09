@@ -13,5 +13,9 @@ void the_switch(const char ch) {
         default:
             std::cout << "You didn't chose a valid option" << std::endl;
             break;
+        case 'x':
+        case 'X':
+            std::cout << "You chose x or X" << std::endl;
+            break;
     }
 }
