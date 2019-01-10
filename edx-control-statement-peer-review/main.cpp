@@ -5,8 +5,10 @@ void the_switch(char);
 void int_array();
 void testPow();
 void test_calc_sine();
+void test_average();
 
 int main() {
+    test_average();
     /*
     power(2, 3);
     power(2, 8);
@@ -18,8 +20,8 @@ int main() {
     the_switch('Y');
     the_switch('x');
     the_switch('Z');
-    */
    testPow();
    test_calc_sine();
+    */
 
 }
