@@ -6,10 +6,12 @@ void int_array();
 void testPow();
 void test_calc_sine();
 void test_average();
+void test_avg();
 
 int main() {
-    test_average();
+    test_avg();
     /*
+    test_average();
     power(2, 3);
     power(2, 8);
     power(3, 3);
