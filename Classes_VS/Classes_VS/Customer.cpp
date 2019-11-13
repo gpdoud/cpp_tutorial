@@ -15,7 +15,7 @@ void Customer::set_name(const std::string name) {
 }
 
 int Customer::operator==(Customer &c) const {
-	return this->get_name().compare(c.get_name());
+	return this->get_name().compare(c.get_name()) == 0;
 }
 
 Customer::Customer() {}

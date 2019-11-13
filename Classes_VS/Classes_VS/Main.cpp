@@ -3,7 +3,7 @@
 #include <string>
 #include "Customer.h"
 
-int main() {
+int test_equality_operator() {
 
 	Customer *cGreg = new Customer;
 	cGreg->set_name("Greg");
@@ -21,7 +21,15 @@ int main() {
 	std::cout << "Compare Greg & Gregory. Result is " << (cGreg == cGregory) << std::endl;
 
 	if(*cGreg == *cGreg2) {
-		std::cout << "compared" << std::endl;
+		std::cout << "*cGreg & *cGreg2 compared equal" << std::endl;
 	}
 	return 0;
+}
+
+int test_access_modifier_override() {
+
+}
+
+int main() {
+	test_access_modifier_override();
 }
